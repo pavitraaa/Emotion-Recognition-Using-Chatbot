@@ -1,0 +1,32 @@
+{% extends 'userbase.html' %}
+{% block content %}
+
+
+{% load static %}
+
+<h1><b>Chatbot</b></h1>
+<br>
+<h3>Select Any Image.. </h3>
+<br>
+<table id="tab" width="95%">
+<tr>
+	<td><a href="{% url 'chatpage2' op='angry' %}""><img src="{{baseUrl}}/a1.jpg" WIDTH="250" height="250" alt="" /></a></a>
+	<td><a href="{% url 'chatpage2' op='joy' %}""><img src="{{baseUrl}}/j1.jpg" WIDTH="250" height="250" alt="" /></a></a>
+	<td><a href="{% url 'chatpage2' op='joy' %}""><img src="{{baseUrl}}/f1.jpg" WIDTH="250" height="250" alt="" /></a></a>
+</tr>
+<tr>
+	<td><a href="{% url 'chatpage2' op='joy' %}""><img src="{{baseUrl}}/j2.jpg" WIDTH="250" height="250" alt="" /></a></a>
+	<td><a href="{% url 'chatpage2' op='angry' %}""><img src="{{baseUrl}}/a2.jpg" WIDTH="250" height="250" alt="" /></a></a>
+	<td><a href="{% url 'chatpage2' op='joy' %}""><img src="{{baseUrl}}/f2.jpg" WIDTH="250" height="250" alt="" /></a></a>
+</tr>
+<tr>
+	<td><a href="{% url 'chatpage2' op='joy' %}""><img src="{{baseUrl}}/f3.jpg" WIDTH="250" height="250" alt="" /></a></a>
+	<td><a href="{% url 'chatpage2' op='joy' %}""><img src="{{baseUrl}}/j3.jpg" WIDTH="250" height="250" alt="" /></a></a>
+	<td><a href="{% url 'chatpage2' op='angry' %}""><img src="{{baseUrl}}/a3.jpg" WIDTH="250" height="250" alt="" /></a></a>
+</tr>
+</table>
+<br><br><br>
+
+
+
+{% endblock %}

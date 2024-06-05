@@ -1,0 +1,33 @@
+{% extends 'userbase.html' %}
+
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h2>
+	Therapists Details
+</h2>
+</h3>
+
+<table id="tab" width="80%">
+	{% for d in data %}
+
+<tr><td><h2><i class="fa fa-user-md"></i>&nbsp;&nbsp;{{d.name}}</h3>
+<h3><i class="fa fa-graduation-cap" aria-hidden="true">&nbsp;&nbsp;</i>{{d.qualification}}</h3></h3>
+<h4><i class="fa fa-hospital-o"></i>&nbsp;&nbsp;{{d.address}}</h3>
+<h4><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{d.city}}</h3>
+
+
+
+<br><br><br>
+				{% endfor %}
+</table>
+
+<center>
+
+</center>
+	
+{% endblock %}

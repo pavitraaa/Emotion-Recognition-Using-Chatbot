@@ -1,0 +1,70 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<h3>
+{{msg}}
+<h2>
+
+<strong> View Data</strong>
+
+</h2>
+</h3>
+<center>
+<table id="tab" width="90%">
+<tr>
+	<th width="10%">Sno<th><center>Category<th><center>Data Type<th><center>Category 2<th><center>Title<th><center>Data
+
+{% for d in data %}
+<tr><td>{{forloop.counter}}<td><center>{{d.category}}<td><center>{{d.d_type}}<td><center>{{d.category2}}<td><center>{{d.title}}<td><center>{{d.data}}
+</tr>
+{% endfor %}
+</table>
+<center>
+
+<h2><strong>Add Data</h4>
+	
+<form method="post" action="/adddata/">
+	{% csrf_token %}
+<table >
+<tr>
+	<td>Category
+<br>
+<select name="cat">
+	<option value="joy" selected>Joy
+	<option value="fear">Fear
+	<option value="angry">Angry
+</select>
+
+<tr>
+	<td>Select Category
+<br>
+<select name="cat2">
+	<option value="family" selected>Family
+	<option value="business">Business
+	<option value="education">Education
+</select>
+
+<tr>
+	<td>Data Type
+<br>
+<select name="t_ype">
+	<option value="music" selected>Music
+	<option value="video">Video
+	<option value="image">Image
+</select>
+
+<tr>
+<td>Title<br>
+	<input type="text" name="title" required width="100%"> </td>
+
+</tr>
+<tr>
+<td>Data<br>
+	<input type="text" name="data" required width="100%"> </td>
+
+
+<tr>
+	<td><br><input type="submit" value="Add"></td>
+</table>
+
+</form>
+{% endblock %}

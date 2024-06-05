@@ -1,0 +1,66 @@
+
+{% extends 'userbase.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+{% static "images" as baseUrl %}
+<h3>
+	
+{{msg}}
+	
+	<h2>
+For you,
+</h2>
+</h3>
+
+<table id="tab" width="80%">
+<tr>
+	{% for d in i %}
+
+
+<td>
+<img src="{{baseUrl}}/{{d}}" width="225" height="225" border="0" alt="">
+</h3>
+
+
+
+	{% endfor %}
+	
+	
+	</table>
+	
+	<br><br><br>
+
+<table id="tab">
+	<tr>
+	{% for d in m %}
+
+<td><h1>
+<a href="{{d}}"><i class="fa fa-music"></i></a>
+	</h3>
+
+{% endfor %}
+
+</table>
+<br><br><br>
+
+
+<table id="tab" width="80%">
+<tr>
+	{% for d in v %}
+<td><h1>
+<a href="{{d}}"><i class="fa fa-play"></i></a>
+
+{% endfor %}
+</table>
+<br><br><br>
+
+
+<center>
+
+</center>
+	
+{% endblock %}

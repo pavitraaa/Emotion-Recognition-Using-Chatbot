@@ -1,0 +1,38 @@
+{% extends 'adminbase.html' %}
+
+{% block content %}
+<h3>
+	
+{{msg}}
+	
+<h2>
+	 <strong>Generalize Queries</strong>
+</h2>
+</h3>
+<center>
+<table id="tab" width="90%">
+<tr>
+	<th width="10%">Sno<th><center>Query<th><center>Answer
+
+				{% for d in data %}
+<tr><td>{{forloop.counter}}<td><center>{{d.q_n}}<td><center>{{d.an_s}}
+</tr>
+				{% endfor %}
+</table>
+<center>
+
+<h3><strong>Add Query</h4>
+	
+<form method="post" action="/addquery/">
+	{% csrf_token %}
+<table >
+<tr>
+	<td>Enter Query
+	<input type="text" name="q" required width="100%"></td>
+	<td>Enter Answer
+	<input type="text" name="a" required width="100%"> </td>
+	<td><br><input type="submit" value="Add"></td>
+</tr>
+</table>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<font size="+1" color="red">
+{{msh}}
+</font>
+
+<h2>Admin Login</h2>
+
+<br><form method="post" action="/adminloginaction/">
+	{% csrf_token %} 
+
+                    <tr><td><input  size="40"  type="text" name="uid" placeholder="User ID" required="required" onblur="validate1()"></input><br></td></tr>
+                    <tr><td><input  size="40" class="form-control"  type="Password" name="pwd" placeholder="Password" required="required" onblur="validate5()"></input><br></td></tr>
+                    <tr><td><br><input type="submit" class="form-control" value="Login">
+                        
+                
+</table>
+</form>
+
+{% endblock %}
